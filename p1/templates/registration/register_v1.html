@@ -1,0 +1,55 @@
+<html><head>
+    <style>
+        #div1 { height: 600px;width: 50%; margin: 50px auto;}
+        form { text-align: center;}
+	ul li { list-style: none; text-decoration: none;}
+    </style>
+    <script>
+        window.onload = function () {
+            var oP1 = document.getElementById('id_password1');
+            var oP2 = document.getElementById('id_password2');
+            var oSubmit1 = document.getElementById('submit1')
+            var oIphone = document.getElementById('phone_number');
+	    var oError = document.getElementById('error');
+            oP2.onmouseover,oP2.onmouseout,oIphone.onmouseover = function () {
+                if(oP1.value != oP2.value)
+                {
+			oError.innerHTML='两次输入的密码不一致'
+                }
+		else
+		{
+			oError.innerHTML=''
+		}
+            }
+
+        }
+    </script>
+</head><body>
+
+
+<div id="div1">
+    <form action="" method="post">
+        <h1>用户注册</h1>
+        <p><label for="id_name">&nbsp;用户名:</label> <input id="id_name" minlength="3" maxlength="100" name="name" type="text" required="required" value={{ ret.name }}></p>
+	{{ form.errors.name }}
+        <p><label for="id_email">邮箱地址:</label> <input id="id_email"  maxlength="100" name="email" type="email" required="required" value={{ ret.email }}></p>
+	{{ form.errors.email }}
+        <p><label for="id_password1">&nbsp;&nbsp;密码:</label> <input id="id_password1" name="password1" minlength="6"type="password" required="required"></p>
+        <p><label for="id_password2">确认密码:</label> <input id="id_password2" name="password2" minlength="6" type="password" required="required"></p>
+        <p>
+	{{ form.errors.password2 }}
+            <label for="phone_number">手机号码:</label>
+            <input id="phone_number" name="iphone" type="tel" minlength="6" required="required" value={{ ret.iphone }}>
+	{{ form.errors.iphone }}
+        </p>
+        <p>
+            <label for="real_name">真实姓名:</label>
+            <input id="real_name" name="real_name" type="text" required="required" value={{ ret.real_name }}>
+	{{ form.errors.real_name }}
+        </p>
+        <input id='submit1' type="submit" value="创建用户">
+	<p id='error' style="text-align: center"></p>
+    </form>
+</div>
+
+</body></html>

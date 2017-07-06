@@ -1,0 +1,29 @@
+<head>
+    <style>
+        #div1 { height: 200px; width: 300px; margin: 200px auto;}
+    </style>
+</head>
+
+{% block content %}
+<div id="div1">
+<form action="" method="post">
+    {% csrf_token %}
+    <label for="password">用户名:{{ username }}</label>
+<br>
+<br>
+    <label for="password">原密码:</label>
+    <input type="password" name="password" value="" id="password">
+<br>
+<br>
+    <label for="newpassword">新密码:</label>
+    <input type="password" name="newpassword" value="" id="newpassword">
+<br>
+<br>
+    <input type="submit" value="修改密码" />
+    <input type="hidden" name="next" value="{{ next|escape }}" />
+{% if message %}
+<p class="error">{{ message }}</p>
+{% endif %}
+</form>
+</div>
+{% endblock %}

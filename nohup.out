@@ -1,0 +1,84 @@
+nohup: 忽略输入
+Validating models...
+
+0 errors found
+July 05, 2017 - 19:10:44
+Django version 1.6.5, using settings 'project.settings'
+Starting development server at http://0.0.0.0:8000/
+Quit the server with CONTROL-C.
+Validating models...
+
+0 errors found
+July 05, 2017 - 19:11:00
+Django version 1.6.5, using settings 'project.settings'
+Starting development server at http://0.0.0.0:8000/
+Quit the server with CONTROL-C.
+[05/Jul/2017 19:14:02] "GET /login HTTP/1.1" 500 136102
+Validating models...
+
+0 errors found
+July 05, 2017 - 19:12:29
+Django version 1.6.5, using settings 'project.settings'
+Starting development server at http://0.0.0.0:8000/
+Quit the server with CONTROL-C.
+[05/Jul/2017 19:15:19] "GET /login HTTP/1.1" 200 2767
+[05/Jul/2017 19:15:19] "GET /check_code HTTP/1.1" 200 793
+[05/Jul/2017 19:15:28] "POST /login HTTP/1.1" 302 0
+[05/Jul/2017 19:15:28] "GET /profile HTTP/1.1" 200 289
+[05/Jul/2017 19:16:07] "GET /profile HTTP/1.1" 200 295
+[05/Jul/2017 19:16:26] "GET /profile HTTP/1.1" 200 298
+[05/Jul/2017 19:17:07] "GET /profile HTTP/1.1" 200 340
+[05/Jul/2017 19:17:10] "GET /um_check HTTP/1.1" 200 406
+Validating models...
+
+0 errors found
+July 05, 2017 - 19:15:16
+Django version 1.6.5, using settings 'project.settings'
+Starting development server at http://0.0.0.0:8000/
+Quit the server with CONTROL-C.
+xiaoshuo
+头像属性: 
+xiaoshuo
+头像属性: 
+xiaoshuo
+头像属性: 
+xiaoshuo
+头像属性: 
+[05/Jul/2017 19:18:35] "GET /logout HTTP/1.1" 200 28
+[05/Jul/2017 19:18:39] "GET /um_check HTTP/1.1" 302 0
+[05/Jul/2017 19:18:39] "GET /accounts/login/?next=/um_check HTTP/1.1" 200 2767
+[05/Jul/2017 19:18:39] "GET /check_code HTTP/1.1" 200 996
+[05/Jul/2017 19:18:47] "POST /accounts/login/?next=/um_check HTTP/1.1" 302 0
+[05/Jul/2017 19:18:47] "GET /profile HTTP/1.1" 200 340
+[05/Jul/2017 19:18:49] "GET /um_check HTTP/1.1" 200 406
+[05/Jul/2017 19:21:37] "GET /um_check HTTP/1.1" 302 0
+[05/Jul/2017 19:21:37] "GET /accounts/login/?next=/um_check HTTP/1.1" 200 2767
+[05/Jul/2017 19:21:38] "GET /check_code HTTP/1.1" 200 963
+[05/Jul/2017 19:21:59] "GET /check_code? HTTP/1.1" 200 869
+[05/Jul/2017 19:22:06] "POST /accounts/login/?next=/um_check HTTP/1.1" 200 2978
+[05/Jul/2017 19:22:07] "GET /check_code HTTP/1.1" 200 933
+[05/Jul/2017 19:22:28] "POST /accounts/login/?next=/um_check HTTP/1.1" 302 0
+[05/Jul/2017 19:22:28] "GET /profile HTTP/1.1" 200 340
+[05/Jul/2017 19:22:30] "GET /um_check HTTP/1.1" 200 406
+[05/Jul/2017 19:23:40] "GET /profile HTTP/1.1" 302 0
+[05/Jul/2017 19:23:40] "GET /accounts/login/?next=/profile HTTP/1.1" 200 2694
+[05/Jul/2017 19:23:40] "GET /check_code HTTP/1.1" 200 901
+[05/Jul/2017 19:23:45] "GET /accounts/login/?next=/profile HTTP/1.1" 200 2694
+[05/Jul/2017 19:23:45] "GET /check_code HTTP/1.1" 200 879
+[05/Jul/2017 19:24:09] "POST /accounts/login/?next=/profile HTTP/1.1" 302 0
+[05/Jul/2017 19:24:09] "GET /profile HTTP/1.1" 200 340
+[05/Jul/2017 19:24:13] "GET /um_check HTTP/1.1" 200 406
+Unhandled exception in thread started by <function wrapper at 0x1f14f50>
+Validating models...
+
+Traceback (most recent call last):
+  File "/usr/local/python/lib/python2.7/site-packages/django/utils/autoreload.py", line 93, in wrapper
+    fn(*args, **kwargs)
+  File "/usr/local/python/lib/python2.7/site-packages/django/core/management/commands/runserver.py", line 101, in inner_run
+    self.validate(display_num_errors=True)
+  File "/usr/local/python/lib/python2.7/site-packages/django/core/management/base.py", line 308, in validate
+    from django.core.management.validation import get_validation_errors
+RuntimeError: sys.meta_path must be a list of import hooks
+Error: That port is already in use.
+[06/Jul/2017 09:38:52] "GET /login HTTP/1.1" 200 2694
+[06/Jul/2017 09:38:52] "GET /check_code HTTP/1.1" 200 787

@@ -1,0 +1,28 @@
+{{ user}}
+
+{% if user.is_authenticated %}
+	<p>Welcome, {{ user }}. Thanks for logging in.</p>
+	
+{% else %}
+<p>Welcome, new user. Please log in.</p>
+{% endif %}
+
+{% if avatar %}
+头像已经上传:
+<br>
+<br>
+<img src={{ avatar }} > 
+{% else %}
+未上传头像
+<br>
+<br>
+<!--
+<form action='/upload/'  method="post" enctype="multipart/form-data">
+    
+<input id='img' type="file" value="上传头像" name='img'>
+<br>
+    <input type="submit" value="提交文件">
+</form>
+-->
+<a href='/um_check'>检查FalconAgent</a>
+{% endif %}

@@ -1,0 +1,39 @@
+<head>
+    <style>
+        #div1 { height: 200px; width: 300px; margin: 200px auto;}
+    </style>
+</head>
+
+{% block content %}
+<div id="div1">
+<form action="" method="post">
+    {% csrf_token %}
+    <label for="username">Username:</label>
+    <input type="text" name="username" value="" id="username">
+<br>
+<br>
+    <label for="password">Password:</label>
+    <input type="password" name="password" value="" id="password">
+<br>
+<br>
+    <label for="check_code"> 验证码:</label>
+    <input type="check_code" name="check_code" value="" id="check_code">
+<img src="/check_code" onclick="ChangeCode(this);">
+<br>
+    <a href='/register' >注册</a>
+    <input type="submit" value="login" />
+    <input type="hidden" name="next" value="{{ next|escape }}" />
+<br>
+<br>
+{% if message %}
+<p class="error">{{ message }}</p>
+{% endif %}
+</form>
+</div>
+{% endblock %}
+    <script>
+        // 点击一次,更改图片内容,
+        function ChangeCode(ths){
+            ths.src = ths.src + '?';
+        }
+    </script>

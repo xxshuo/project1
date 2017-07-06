@@ -1,0 +1,19 @@
+{% block title %}Create an account{% endblock %}
+{% block content %}
+<h1>Create an account</h1>
+<form action="" method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <p>
+        <label for="phone_number">iphone number:</label>
+        <input id="phone_number" name="iphone" type="text">
+        <span class="helptext">Enter the iphone_number</span>
+    </p>
+    <p>
+        <label for="real_name">真实姓名:</label>
+        <input id="real_name" name="real_name" type="text">
+        <span class="helptext">Enter your name</span>
+    </p>
+    <input type="submit" value="Create the account">
+</form>
+{% endblock %}
